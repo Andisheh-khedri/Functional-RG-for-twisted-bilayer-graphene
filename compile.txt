@@ -1,0 +1,9 @@
+ 
+gfortran -c fermi64old.f90
+gfortran fermi64old.f90 opkda1.f opkda2.f opkdmain.f quadpack.f interp.f90 zero_rc.f90 eispack.f90 -mcmodel=large  -o k
+
+
+with omp:
+
+gfortran -c fermi64omp.f90
+gfortran -fopenmp fermi64omp.f90 opkda1.f opkda2.f opkdmain.f quadpack.f interp.f90 zero_rc.f90 eispack.f90 -mcmodel=large  -o k
