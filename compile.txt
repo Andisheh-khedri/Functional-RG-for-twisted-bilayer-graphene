@@ -1,4 +1,6 @@
- 
+To compile the following libraries are required: opkda1.f opkda2.f opkdmain.f quadpack.f interp.f90 zero_rc.f90 eispack.f90
+
+
 gfortran -c fermi64old.f90
 gfortran fermi64old.f90 opkda1.f opkda2.f opkdmain.f quadpack.f interp.f90 zero_rc.f90 eispack.f90 -mcmodel=large  -o k
 
